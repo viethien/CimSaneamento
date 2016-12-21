@@ -17,9 +17,8 @@
 <!--Banner (Fora do container geral para pegar a tela toda)!-->
 <div class="jumbotron text-center" id="banner">
   <div class="container-fluid"><br><br><br><br><br>
-
-      <h1>Cim</h1>
-    <p>Saneamento Industrial</p>
+     <h1>Cim</h1>
+     <p>Saneamento Industrial</p>
   </div>
 </div>
 <!--Fim do banner!-->
@@ -34,13 +33,34 @@
   <div class="row">
     <!---Thumbs!--->
     <div class="col-md-4">
-      
+      <div class="thumbnail">
+        <img src="img/" Alt="Saneamento">
+        <div class="caption">
+          <h3>Quem somos</h3>
+          <p class="text-center"> Aqui entra uma breve descrição</p>
+          <p><a href="sobre.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hidden="true"></span> Ver Mais</a></p>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-      
+      <div class="thumbnail">
+        <img src="img/" Alt="Saneamento">
+        <div class="caption">
+          <h3>Saneamento</h3>
+          <p class="text-center">Aqui entra uma outra descrição</p>
+          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hiddem="true"></span>Ver Mais</a></p>
+        </div>
+      </div>
     </div>
     <div class="col-md-4">
-      
+      <div class="thumbnail">
+        <img src="img/" Alt="Trânsito">
+        <div class="caption">
+          <h3>Trânsito</h3>
+          <p class="text-center">Aqui entra uma outra descrição</p>
+          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hiddem="true"></span>Ver Mais</a></p>
+        </div>
+      </div>      
     </div>
      <!---Fim das Thumbs!--->
   </div>
