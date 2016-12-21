@@ -26,7 +26,11 @@
 
 <div class="container"><!--Inicio do container geral!-->
   <?php include 'includes/nav.html';?><!--Incluí a Navbar!-->
+  
+
 <!---------------------Inicio Conteúdo!----------------------------------->
+ 
+  
   <div class="row">
     <!---Thumbs!--->
     <div class="col-md-4">
@@ -44,6 +48,8 @@
   
   
 <!----------------------Fim conteúdo!------------------------------------->
+
+  
 </div> <!--Fim do container Geral!-->
 <!--Incluí Footer!-->
 <?php include 'includes/footer.html';?>
