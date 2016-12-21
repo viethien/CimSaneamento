@@ -14,7 +14,7 @@
 <link rel= "stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
-<!--Banner!-->
+<!--Banner (Fora do container geral para pegar a tela toda)!-->
 <div class="jumbotron text-center" id="banner">
   <div class="container-fluid"><br><br><br><br><br>
 
@@ -26,21 +26,25 @@
 
 <div class="container"><!--Inicio do container geral!-->
   <?php include 'includes/nav.html';?><!--Incluí a Navbar!-->
-
-
-
-
-
-
-
-
-
-
-
-
+<!---------------------Inicio Conteúdo!----------------------------------->
+  <div class="row">
+    <!---Thumbs!--->
+    <div class="col-md-4">
+      
+    </div>
+    <div class="col-md-4">
+      
+    </div>
+    <div class="col-md-4">
+      
+    </div>
+     <!---Fim das Thumbs!--->
+  </div>
+  
+  
+  
+<!----------------------Fim conteúdo!------------------------------------->
 </div> <!--Fim do container Geral!-->
-
-
 <!--Incluí Footer!-->
 <?php include 'includes/footer.html';?>
 <!-- Bootstrap core JavaScript
@@ -58,10 +62,4 @@ $(document).ready(function(){
 });
 </script>
 </body>
-
-
-
-
-
-
 </html>
