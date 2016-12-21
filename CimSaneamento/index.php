@@ -28,7 +28,7 @@
   <?php include 'includes/nav.html';?><!--Incluí a Navbar!-->
   
 
-<!---------------------Inicio Conteúdo!----------------------------------->
+<!--========Início conteúdo!=========--->
  
   
   <div class="row">
@@ -47,7 +47,7 @@
   
   
   
-<!----------------------Fim conteúdo!------------------------------------->
+<!--========Fim conteúdo!=========--->
 
   
 </div> <!--Fim do container Geral!-->
