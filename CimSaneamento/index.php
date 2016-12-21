@@ -10,8 +10,8 @@
 <!--Define a viewport!-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--Inclui o Framework bootstrap e o CSS Personalizado!-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rek= "stylesheet" href="css/estilo.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel= "stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
 <!--Banner!-->
