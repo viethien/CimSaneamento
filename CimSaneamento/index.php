@@ -9,7 +9,7 @@
 <meta name="author" content="Tiago Silveira">
 <!--Define a viewport!-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Inclui o Framework bootstrap e o CSS Personalizado!-->
+<!--Inclui o Framework bootstrap/CSS Personalizado/Fontes google!-->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel= "stylesheet" type="text/css" href="css/estilo.css">
 </head>
@@ -23,69 +23,63 @@
 </div>
 <!--Fim do banner!-->
 
-<div class="container"><!--Inicio do container geral!-->
+
   <?php include 'includes/nav.html';?><!--Incluí a Navbar!-->
-  
+
 
 <!--========Início conteúdo!=========--->
- 
-  
+
+<div class="container"><!--Inicio do container geral!-->
   <div class="row">
     <!---Thumbs!--->
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="img/" Alt="Saneamento">
+        <img src="img/home/empresa.png" Alt="Empresa">
         <div class="caption">
           <h3>Quem somos</h3>
-          <p class="text-center"> Aqui entra uma breve descrição</p>
-          <p><a href="sobre.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hidden="true"></span> Ver Mais</a></p>
+          <p class="text-left">Empresa líder no seguimento de execução de serviços públicos e privados nas áreas de Saneamento e Operações Rodoviárias.</p>
+          <p><a href="sobre.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus" aria-hiddem="true"></span> Ver Mais</a></p>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="img/" Alt="Saneamento">
+        <img src="img/home/saneamento.png" width="200px" height="200px"Alt="Saneamento">
         <div class="caption">
           <h3>Saneamento</h3>
-          <p class="text-center">Aqui entra uma outra descrição</p>
-          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hiddem="true"></span>Ver Mais</a></p>
+          <p class="text-left">Serviços de limpeza, desobstrução e video inpeção,
+          com equipe especializada e equipamento de alta qualidade.<br></p>
+          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus" aria-hiddem="true"></span>Ver Mais</a></p>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="thumbnail">
-        <img src="img/" Alt="Trânsito">
+        <img src="img/home/transito.png" Alt="Trânsito">
         <div class="caption">
           <h3>Trânsito</h3>
-          <p class="text-center">Aqui entra uma outra descrição</p>
-          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus-align-right" aria-hiddem="true"></span>Ver Mais</a></p>
+          <p class="text-left">Nossa empresa é líder no país em instalação e operação de equipamentos coletores de dados estatísticos de trânsito rodoviário.</p>
+          <p><a href="transito.php" class="btn btn-default" role="button"><span class="glyphicon glyphicon-plus" aria-hiddem="true"></span>Ver Mais</a></p>
         </div>
-      </div>      
+      </div>
     </div>
      <!---Fim das Thumbs!--->
   </div>
-  
-  
-  
+
+
+
 <!--========Fim conteúdo!=========--->
 
-  
 </div> <!--Fim do container Geral!-->
+
 <!--Incluí Footer!-->
 <?php include 'includes/footer.html';?>
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- No fim para carregar mais rapido -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-$(document).ready(function(){
-  $('.dropdown-submenu a.test').on("click", function(e){
-    $(this).next('ul').toggle();
-    e.stopPropagation();
-    e.preventDefault();
-  });
-});
-</script>
+
 </body>
 </html>
