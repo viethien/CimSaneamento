@@ -1,0 +1,237 @@
+$vermelho: #D91E18;
+$cinza: #6C7A89;
+$preto: #292929;
+$branco: #fff;
+$pretoclaro: #353535;
+$pretomaisclaro: #505050;
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('truetype');
+    src: local('Lato Light'), local('Lato-Light'), url(../fonts/Lato-Light.ttf) format('truetype');
+}
+@mixin fotoLinear($r, $g, $b, $a1, $a2, $nome, $extensao) {
+  $url: "../img/#{$nome}.#{$extensao}";
+  background: linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2)), url($url) ;
+  background: -webkit-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2)), url($url) ;
+  background: -moz-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2)), url($url) ;
+  background: linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2)), url($url) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+
+}
+@mixin borderradius ($px) {
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  -o-border-radius: $px;
+  -ms-border-radius:$px;
+}
+@mixin transicao ($tempo){
+  -webkit-transition: all $tempo linear;
+  -moz-transition: all $tempo linear;
+  -o-transition: all $tempo linear;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-justify{
+  text-align: justify;
+}
+.text-center{
+  text-align: center;
+}
+
+.titulo{
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2em;
+  border-bottom: 2px solid red;
+  display: inline-block;
+}
+.titulo2{
+  @extend .titulo;
+  border: none;
+}
+.subtitulo{
+  text-transform: uppercase;
+  padding: 20px 0px 20px;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.texto{
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+#banner{
+  @include fotoLinear(0,0,0,0,1, transito, jpg);
+  height: 100vh;
+  background-color: $vermelho;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+  top: 0 !important;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+    h1{
+    @extend .titulo;
+    padding-top: 200px;
+    border-bottom: none;
+  }
+}
+section:not(:first-child){
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#sobre{
+  @include fotoLinear (0,0,0,1,0.9, ponte, jpeg);
+  color: $branco;
+}
+
+.botaoprimario{
+ @include borderradius(20px);
+ @include transicao(0.4s);
+ background-color: $vermelho;
+ border: none;
+ padding: 10px 50px;
+ font-size: 15px;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ font-weight: bold;
+ color: $branco;
+ margin-top: 15px;
+
+ &:hover{
+   background-color: $branco;
+   color: $preto;
+ }
+ .glyphicon{
+   top: 2px;
+ }
+}
+.botaosecundario{
+  @extend .botaoprimario;
+  background-color: $branco;
+  color: $preto;
+  &:hover{
+    background-color: $vermelho;
+    color: $branco;
+  }
+}
+
+#atividades{
+  @include fotoLinear (0,0,0,1,0.8, rodovia, jpeg);
+  background-color: $preto;
+  color: $branco;
+}
+.thumbnail{
+  background: transparent !important;
+  border: 0 !important;
+}
+.caption{
+  color: $branco !important;
+}
+footer{
+  padding-top: 25px;
+  background-color: $pretomaisclaro;
+  color: $branco;
+  word-wrap: break-word;
+  a{
+    border-bottom: none;
+    color: $branco !important;
+    @include transicao(0.4s);
+  }
+  a:hover{
+    text-decoration: none !important;
+    border-bottom: 1px solid $branco;
+  }
+  li{
+    padding-bottom: 10px;
+    list-style: none;
+    font-size: 20px;
+  }
+  p{
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .titulofooter{
+    @extend .titulo2;
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+  }
+  .glyphicon{
+    color: $vermelho;
+  }
+  .subtitulofooter{
+    @extend .subtitulo;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  section:not(:first-child){
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+// A partir aqui comecei a trabalar no "Quem somos (expanio)"
+#sobrenos{
+  color: $preto;
+  .col-md-6:first-child, .col-sm-12:first-child{
+    margin:0;
+    padding: 0;
+  }
+
+  .titulo3{
+    padding-top: 29px;
+    padding-right: 50px;
+    padding-bottom: 39px;
+    padding-left: 50px;
+    font-weight: 1500;
+    font-size: 40px;
+    font-style: bold;
+  }
+  p{
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 16px;
+    font-style: bold;
+  }
+  article{
+      color: $preto;
+      height: 101%;
+  }
+  img{
+    width: 100%;
+    max-width: 100%;
+  }
+}
+#missao{
+  padding-top: 30px;
+  color: $preto;
+  padding-top: 10px;
+  h2{
+    font-size: 25px;
+    padding-top: 15px;
+  }
+  li{
+    list-style: none;
+  }
+  .col-md-4{
+    padding-bottom: 15px ;
+  }
+}

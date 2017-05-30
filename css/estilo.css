@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+@font-face {
+  font-family: 'Lato';
+  src: local("Lato Regular"), local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
+  src: local("Lato Light"), local("Lato-Light"), url(../fonts/Lato-Light.ttf) format("truetype"); }
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-center {
+  text-align: center; }
+
+.titulo, .titulo2, footer .titulofooter, #banner h1 {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2em;
+  border-bottom: 2px solid red;
+  display: inline-block; }
+
+.titulo2, footer .titulofooter {
+  border: none; }
+
+.subtitulo, footer .subtitulofooter {
+  text-transform: uppercase;
+  padding: 20px 0px 20px;
+  font-weight: normal;
+  font-size: 2rem; }
+
+.texto {
+  font-weight: normal;
+  font-size: 1.5rem; }
+
+#banner {
+  background: linear-gradient(transparent, black), url("../img/transito.jpg");
+  background: -webkit-linear-gradient(transparent, black), url("../img/transito.jpg");
+  background: -moz-linear-gradient(transparent, black), url("../img/transito.jpg");
+  background: linear-gradient(transparent, black), url("../img/transito.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: #D91E18;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+  top: 0 !important;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter; }
+  #banner h1 {
+    padding-top: 200px;
+    border-bottom: none; }
+
+section:not(:first-child) {
+  padding-top: 100px;
+  padding-bottom: 100px; }
+
+#sobre {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
+  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
+  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
+  background: linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; }
+
+.botaoprimario, .botaosecundario {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  background-color: #D91E18;
+  border: none;
+  padding: 10px 50px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 15px; }
+  .botaoprimario:hover, .botaosecundario:hover {
+    background-color: #fff;
+    color: #292929; }
+  .botaoprimario .glyphicon, .botaosecundario .glyphicon {
+    top: 2px; }
+
+.botaosecundario {
+  background-color: #fff;
+  color: #292929; }
+  .botaosecundario:hover {
+    background-color: #D91E18;
+    color: #fff; }
+
+#atividades {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #292929;
+  color: #fff; }
+
+.thumbnail {
+  background: transparent !important;
+  border: 0 !important; }
+
+.caption {
+  color: #fff !important; }
+
+footer {
+  padding-top: 25px;
+  background-color: #505050;
+  color: #fff;
+  word-wrap: break-word; }
+  footer a {
+    border-bottom: none;
+    color: #fff !important;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear; }
+  footer a:hover {
+    text-decoration: none !important;
+    border-bottom: 1px solid #fff; }
+  footer li {
+    padding-bottom: 10px;
+    list-style: none;
+    font-size: 20px; }
+  footer p {
+    padding-top: 20px;
+    font-size: 15px; }
+  footer .titulofooter {
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px; }
+  footer .glyphicon {
+    color: #D91E18; }
+  footer .subtitulofooter {
+    font-size: 15px; }
+
+@media only screen and (max-width: 768px) {
+  section:not(:first-child) {
+    padding-top: 50px;
+    padding-bottom: 50px; } }
+#sobrenos {
+  color: #292929; }
+  #sobrenos .col-md-6:first-child, #sobrenos .col-sm-12:first-child {
+    margin: 0;
+    padding: 0; }
+  #sobrenos .titulo3 {
+    padding-top: 29px;
+    padding-right: 50px;
+    padding-bottom: 39px;
+    padding-left: 50px;
+    font-weight: 1500;
+    font-size: 40px;
+    font-style: bold; }
+  #sobrenos p {
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 16px;
+    font-style: bold; }
+  #sobrenos article {
+    color: #292929;
+    height: 101%; }
+  #sobrenos img {
+    width: 100%;
+    max-width: 100%; }
+
+#missao {
+  padding-top: 30px;
+  color: #292929;
+  padding-top: 10px; }
+  #missao h2 {
+    font-size: 25px;
+    padding-top: 15px; }
+  #missao li {
+    list-style: none; }
+  #missao .col-md-4 {
+    padding-bottom: 15px; }
+
+/*# sourceMappingURL=estilo.css.map */
