@@ -1,5 +1,6 @@
 $vermelho: #D91E18;
-$cinza: #6C7A89;
+$vermelho2: #F64747;
+$cinza: #eeeeee;
 $preto: #292929;
 $branco: #fff;
 $pretoclaro: #353535;
@@ -10,7 +11,9 @@ $pretomaisclaro: #505050;
   padding: 0;
   font-family: 'Lato', sans-serif;
 }
-
+body, html{
+  overflow-x: hidden;
+}
 @font-face {
     font-family: 'Lato';
     src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('truetype');
@@ -25,7 +28,12 @@ $pretomaisclaro: #505050;
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
-
+}
+@mixin linear ($r, $g, $b, $a1, $a2) {
+  background: linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2)) ;
+  background: -webkit-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
+  background: -moz-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
+  background: linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
 }
 @mixin borderradius ($px) {
   -webkit-border-radius: $px;
@@ -45,18 +53,59 @@ $pretomaisclaro: #505050;
   text-align: right;
 }
 .text-justify{
-  text-align: justify;
+  text-align: justify !important;
+  text-justify: inter-word !important;
 }
 .text-center{
   text-align: center;
 }
+.navbar{
+  height: 75px;
+  text-align: right;
+  position: fixed;
+  top:0;
+  background-color: transparent;
+  width: 100%;
+  color: #fff;
+  z-index: 999;
+  letter-spacing: 2px;
+  transition: all 1.1s ease;
+  -webkit-transition: all 1.1s ease;
+  -moz-transition: all 1.1s ease;
+  -o-transition: all 1.1s ease;
 
+}
+
+.nav-item{
+  font-style: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 25px;
+  margin-top: 25px;
+  list-style: none;
+  font-size: 10px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.nav-item:hover{
+  transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+}
+.nav-item:last-child{
+  padding-right: 30px;
+}
 .titulo{
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 2em;
   border-bottom: 2px solid red;
   display: inline-block;
+  margin: auto;
 }
 .titulo2{
   @extend .titulo;
@@ -73,8 +122,6 @@ $pretomaisclaro: #505050;
   font-size: 1.5rem;
 }
 #banner{
-  @include fotoLinear(0,0,0,0,1, transito, jpg);
-  height: 100vh;
   background-color: $vermelho;
   background-repeat:no-repeat;
   background-size: cover;
@@ -87,24 +134,22 @@ $pretomaisclaro: #505050;
   font-weight: lighter;
     h1{
     @extend .titulo;
-    padding-top: 200px;
     border-bottom: none;
   }
 }
 section:not(:first-child){
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #sobre{
-  @include fotoLinear (0,0,0,1,0.9, ponte, jpeg);
-  color: $branco;
+  color: $preto;
 }
 
 .botaoprimario{
  @include borderradius(20px);
  @include transicao(0.4s);
- background-color: $vermelho;
+ background-color: $vermelho2;
  border: none;
  padding: 10px 50px;
  font-size: 15px;
@@ -115,8 +160,8 @@ section:not(:first-child){
  margin-top: 15px;
 
  &:hover{
-   background-color: $branco;
-   color: $preto;
+   background-color: $preto;
+   color: $branco;
  }
  .glyphicon{
    top: 2px;
@@ -132,17 +177,53 @@ section:not(:first-child){
   }
 }
 
-#atividades{
-  @include fotoLinear (0,0,0,1,0.8, rodovia, jpeg);
+.atividades{
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
   background-color: $preto;
   color: $branco;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  overflow: hidden;
+  @include transicao(0.5s);
+  .thumbnail{
+    background: transparent !important;
+    border: 0 !important;
+  }
+  .caption{
+    color: $branco !important;
+  }
+}
+.atividadesSan{
+ @extend .atividades;
+}
+.atividadesTran{
+  max-width: 100%;
+  overflow: hidden;
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background-color: $preto;
+  color: $branco;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include transicao(0.5s);
+  .thumbnail{
+    background: transparent !important;
+    border: 0 !important;
+  }
+  .caption{
+    color: $branco !important;
+  }
 }
 .thumbnail{
-  background: transparent !important;
-  border: 0 !important;
-}
-.caption{
-  color: $branco !important;
+  overflow: hidden;
 }
 footer{
   padding-top: 25px;
@@ -188,50 +269,151 @@ footer{
     padding-bottom: 50px;
   }
 }
-// A partir aqui comecei a trabalar no "Quem somos (expanio)"
-#sobrenos{
-  color: $preto;
-  .col-md-6:first-child, .col-sm-12:first-child{
-    margin:0;
-    padding: 0;
-  }
-
-  .titulo3{
-    padding-top: 29px;
-    padding-right: 50px;
-    padding-bottom: 39px;
-    padding-left: 50px;
-    font-weight: 1500;
-    font-size: 40px;
-    font-style: bold;
-  }
-  p{
-    padding-right: 50px;
-    padding-left: 50px;
-    font-size: 16px;
-    font-style: bold;
-  }
-  article{
-      color: $preto;
-      height: 101%;
-  }
-  img{
-    width: 100%;
-    max-width: 100%;
+// A partir aqui comecei a trabalhar no "Quem somos (expandida)"
+.banner-2{
+  @include fotoLinear(242, 38, 19, 0.5, 0.5, sala, jpg);
+  @extend #banner;
+  height: 60vh;
+  margin-bottom: 0 !important;
+  h1{
+    margin-top: 75px;
+    font-family: "Arial", sans-serif;
+    color: $branco;
+    font-size: 5rem;
+    word-wrap: break-word;
+    font-weight: bolder;
   }
 }
+.comfig{
+  overflow: hidden;
+
+  img{
+    height: 90%;
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+   img:hover{
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      overflow: hidden;
+
+    }
+  figcaption{
+    background-color: $preto;
+    color: $branco;
+    font-size: 1em;
+    height: 50px;
+  }
+}
+
+.triangulo{
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: $vermelho transparent transparent transparent;
+}
+#sobrenos{
+background: $vermelho;
+color: $branco;
+.titulo{
+  border-bottom-color: $preto;
+}
+ p {
+   font-size: 16px;
+   font-weight:  bold;
+ }
+ .col-md-6:last-child{
+   margin: 0 !important;
+   padding: 0!important;
+   img{
+     width: 80%;
+     max-width: 100%;
+   }
+ }
+}
+
 #missao{
-  padding-top: 30px;
-  color: $preto;
-  padding-top: 10px;
-  h2{
-    font-size: 25px;
-    padding-top: 15px;
+  .col-md-4{
+    padding-bottom: 20px;
+    padding-left: 8%;
+    padding-right: 3%;
   }
   li{
     list-style: none;
   }
-  .col-md-4{
-    padding-bottom: 15px ;
+}
+#clientes{
+  background-color: $cinza;
+  .caption{
+    color: $preto !important;
   }
+}
+.diferenciais{
+  background: $preto;
+  color: $branco;
+
+  li{
+    list-style: none;
+    font-size: 30px;
+  }
+}
+#transitosec{
+ background: $vermelho;
+ color: $branco !important;
+}
+
+.cards{
+.thumbnail{
+  position: relative;
+}
+img{
+  width: 100%;
+  max-width: 100%;
+}
+  figcaption{
+    display: table-cell;
+    vertical-align: middle;
+    color: $branco;
+    @include transicao(0.5s);
+    @include linear(0,0,0, 0.4, 0.4);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+ }
+ .container-fig {
+   display: inline-block;
+   margin: auto;
+   position: absolute;
+   top: 100px;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   width: 70%;
+   button{
+     @extend .botaoprimario;
+     font-size: 14px !important;
+     &:hover{
+       background-color: $branco;
+       color: $preto;
+     }
+   }
+  }
+
 }

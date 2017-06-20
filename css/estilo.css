@@ -3,6 +3,9 @@
   padding: 0;
   font-family: 'Lato', sans-serif; }
 
+body, html {
+  overflow-x: hidden; }
+
 @font-face {
   font-family: 'Lato';
   src: local("Lato Regular"), local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
@@ -14,17 +17,57 @@
   text-align: right; }
 
 .text-justify {
-  text-align: justify; }
+  text-align: justify !important;
+  text-justify: inter-word !important; }
 
 .text-center {
   text-align: center; }
 
-.titulo, .titulo2, footer .titulofooter, #banner h1 {
+.navbar {
+  height: 75px;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+  width: 100%;
+  color: #fff;
+  z-index: 999;
+  letter-spacing: 2px;
+  transition: all 1.1s ease;
+  -webkit-transition: all 1.1s ease;
+  -moz-transition: all 1.1s ease;
+  -o-transition: all 1.1s ease; }
+
+.nav-item {
+  font-style: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 25px;
+  margin-top: 25px;
+  list-style: none;
+  font-size: 10px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease; }
+
+.nav-item:hover {
+  transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px); }
+
+.nav-item:last-child {
+  padding-right: 30px; }
+
+.titulo, .titulo2, footer .titulofooter, #banner h1, .banner-2 h1 {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 2em;
   border-bottom: 2px solid red;
-  display: inline-block; }
+  display: inline-block;
+  margin: auto; }
 
 .titulo2, footer .titulofooter {
   border: none; }
@@ -39,15 +82,7 @@
   font-weight: normal;
   font-size: 1.5rem; }
 
-#banner {
-  background: linear-gradient(transparent, black), url("../img/transito.jpg");
-  background: -webkit-linear-gradient(transparent, black), url("../img/transito.jpg");
-  background: -moz-linear-gradient(transparent, black), url("../img/transito.jpg");
-  background: linear-gradient(transparent, black), url("../img/transito.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
+#banner, .banner-2 {
   background-color: #D91E18;
   background-repeat: no-repeat;
   background-size: cover;
@@ -58,25 +93,17 @@
   top: 0 !important;
   font-family: 'Lato', sans-serif;
   font-weight: lighter; }
-  #banner h1 {
-    padding-top: 200px;
+  #banner h1, .banner-2 h1 {
     border-bottom: none; }
 
 section:not(:first-child) {
-  padding-top: 100px;
-  padding-bottom: 100px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 #sobre {
-  background: linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
-  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
-  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
-  background: linear-gradient(black, rgba(0, 0, 0, 0.9)), url("../img/ponte.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff; }
+  color: #292929; }
 
-.botaoprimario, .botaosecundario {
+.botaoprimario, .botaosecundario, .cards .container-fig button {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
@@ -84,7 +111,7 @@ section:not(:first-child) {
   -webkit-transition: all 0.4s linear;
   -moz-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
-  background-color: #D91E18;
+  background-color: #F64747;
   border: none;
   padding: 10px 50px;
   font-size: 15px;
@@ -93,10 +120,10 @@ section:not(:first-child) {
   font-weight: bold;
   color: #fff;
   margin-top: 15px; }
-  .botaoprimario:hover, .botaosecundario:hover {
-    background-color: #fff;
-    color: #292929; }
-  .botaoprimario .glyphicon, .botaosecundario .glyphicon {
+  .botaoprimario:hover, .botaosecundario:hover, .cards .container-fig button:hover {
+    background-color: #292929;
+    color: #fff; }
+  .botaoprimario .glyphicon, .botaosecundario .glyphicon, .cards .container-fig button .glyphicon {
     top: 2px; }
 
 .botaosecundario {
@@ -106,23 +133,50 @@ section:not(:first-child) {
     background-color: #D91E18;
     color: #fff; }
 
-#atividades {
+.atividades, .atividadesSan {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background-color: #292929;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear; }
+  .atividades .thumbnail, .atividadesSan .thumbnail {
+    background: transparent !important;
+    border: 0 !important; }
+  .atividades .caption, .atividadesSan .caption {
+    color: #fff !important; }
+
+.atividadesTran {
+  max-width: 100%;
+  overflow: hidden;
   background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
   background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
   background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
   background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background-color: #292929;
+  color: #fff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #292929;
-  color: #fff; }
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear; }
+  .atividadesTran .thumbnail {
+    background: transparent !important;
+    border: 0 !important; }
+  .atividadesTran .caption {
+    color: #fff !important; }
 
 .thumbnail {
-  background: transparent !important;
-  border: 0 !important; }
-
-.caption {
-  color: #fff !important; }
+  overflow: hidden; }
 
 footer {
   padding-top: 25px;
@@ -158,41 +212,133 @@ footer {
   section:not(:first-child) {
     padding-top: 50px;
     padding-bottom: 50px; } }
-#sobrenos {
-  color: #292929; }
-  #sobrenos .col-md-6:first-child, #sobrenos .col-sm-12:first-child {
+.banner-2 {
+  background: linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
+  background: -webkit-linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
+  background: -moz-linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
+  background: linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  margin-bottom: 0 !important; }
+  .banner-2 h1 {
+    margin-top: 75px;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    font-size: 5rem;
+    word-wrap: break-word;
+    font-weight: bolder; }
+
+.comfig {
+  overflow: hidden; }
+  .comfig img {
+    height: 90%;
+    width: 100%;
+    max-width: 100%;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    overflow: hidden;
     margin: 0;
     padding: 0; }
-  #sobrenos .titulo3 {
-    padding-top: 29px;
-    padding-right: 50px;
-    padding-bottom: 39px;
-    padding-left: 50px;
-    font-weight: 1500;
-    font-size: 40px;
-    font-style: bold; }
-  #sobrenos p {
-    padding-right: 50px;
-    padding-left: 50px;
-    font-size: 16px;
-    font-style: bold; }
-  #sobrenos article {
-    color: #292929;
-    height: 101%; }
-  #sobrenos img {
-    width: 100%;
-    max-width: 100%; }
+  .comfig img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    overflow: hidden; }
+  .comfig figcaption {
+    background-color: #292929;
+    color: #fff;
+    font-size: 1em;
+    height: 50px; }
 
-#missao {
-  padding-top: 30px;
-  color: #292929;
-  padding-top: 10px; }
-  #missao h2 {
-    font-size: 25px;
-    padding-top: 15px; }
-  #missao li {
-    list-style: none; }
-  #missao .col-md-4 {
-    padding-bottom: 15px; }
+.triangulo {
+  margin-left: 50% !important;
+  margin-right: 50% !important;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  border-color: #D91E18 transparent transparent transparent; }
+
+#sobrenos {
+  background: #D91E18;
+  color: #fff; }
+  #sobrenos .titulo, #sobrenos .titulo2, #sobrenos footer .titulofooter, footer #sobrenos .titulofooter, #sobrenos #banner h1, #banner #sobrenos h1, #sobrenos .banner-2 h1, .banner-2 #sobrenos h1 {
+    border-bottom-color: #292929; }
+  #sobrenos p {
+    font-size: 16px;
+    font-weight: bold; }
+  #sobrenos .col-md-6:last-child {
+    margin: 0 !important;
+    padding: 0 !important; }
+    #sobrenos .col-md-6:last-child img {
+      width: 80%;
+      max-width: 100%; }
+
+#missao .col-md-4 {
+  padding-bottom: 20px;
+  padding-left: 8%;
+  padding-right: 3%; }
+#missao li {
+  list-style: none; }
+
+#clientes {
+  background-color: #eeeeee; }
+  #clientes .caption {
+    color: #292929 !important; }
+
+.diferenciais {
+  background: #292929;
+  color: #fff; }
+  .diferenciais li {
+    list-style: none;
+    font-size: 30px; }
+
+#transitosec {
+  background: #D91E18;
+  color: #fff !important; }
+
+.cards .thumbnail {
+  position: relative; }
+.cards img {
+  width: 100%;
+  max-width: 100%; }
+.cards figcaption {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+.cards .container-fig {
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 70%; }
+  .cards .container-fig button {
+    font-size: 14px !important; }
+    .cards .container-fig button:hover {
+      background-color: #fff;
+      color: #292929; }
 
 /*# sourceMappingURL=estilo.css.map */

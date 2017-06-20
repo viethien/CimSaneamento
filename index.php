@@ -24,7 +24,7 @@
     </div>
 
    </section>
-   <section class="container-fluid" id="atividades">
+   <section class="container-fluid atividades" id="atividades">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
         <h1 class="titulo">O que nós fazemos?</h1>
@@ -45,7 +45,7 @@
           <p>
             Serviços de desobstrução e vídeoinspeção.
           </p>
-          <a href="saneamento.php"><button type="button" class="botaosecundario" name="button">Ver Mais</button></a>
+          <a href="saneamento.php"><button type="button" class="botaosecundario"  name="button" id="saneamentoBg">Ver Mais</button></a>
          </div>
         </div>
       </div>
@@ -56,7 +56,8 @@
           <h2>Soluções para Rodovias</h2>
           <p>
             Serviços de estatística de trânsito e operação de rodovias
-          <a href="transito.php"><button type="button" class="botaosecundario" name="button">Ver Mais</button></a>
+          </p>
+          <a href="transito.php"><button type="button" class="botaosecundario" name="button" id="transitoBg">Ver Mais</button></a>
          </div>
         </div>
       </div>
