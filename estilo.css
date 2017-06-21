@@ -28,7 +28,7 @@ body, html {
   text-align: right;
   position: fixed;
   top: 0;
-  background-color: #292929;
+  background-color: transparent;
   width: 100%;
   color: #fff;
   z-index: 999;
@@ -60,12 +60,6 @@ body, html {
 
 .nav-item:last-child {
   padding-right: 30px; }
-
-.navbar-mobile {
-  display: none; }
-
-.container-navbar {
-  display: none; }
 
 .titulo, .titulo2, footer .titulofooter, #banner h1, .banner-2 h1 {
   text-transform: uppercase;
@@ -262,7 +256,6 @@ footer {
     height: 50px; }
 
 .triangulo {
-  margin-top: -1px;
   margin-left: 50% !important;
   margin-right: 50% !important;
   position: absolute;
@@ -296,8 +289,6 @@ footer {
 
 #clientes {
   background-color: #eeeeee; }
-  #clientes .thumbnail {
-    background: transparent !important; }
   #clientes .caption {
     color: #292929 !important; }
 
@@ -306,7 +297,7 @@ footer {
   color: #fff; }
   .diferenciais li {
     list-style: none;
-    font-size: 20px; }
+    font-size: 30px; }
 
 #transitosec {
   background: #D91E18;
@@ -318,11 +309,8 @@ footer {
   width: 100%;
   max-width: 100%; }
 .cards figcaption {
-  margin-left: -5px;
-  top: 0;
-  position: absolute;
-  width: 101%;
-  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
   color: #fff;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
@@ -331,81 +319,26 @@ footer {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background: -moz-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  background-size: cover;
-  box-sizing: border-box; }
-.cards .container-fig {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 50%;
-  left: 15%;
-  width: 70%;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-  position: absolute; }
+  top: 0;
+  left: 0; }
+.cards .container-fig {
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 70%; }
   .cards .container-fig button {
-    word-wrap: none;
     font-size: 14px !important; }
     .cards .container-fig button:hover {
       background-color: #fff;
       color: #292929; }
-
-@media only screen and (max-width: 768px) {
-  .navbar {
-    display: none; }
-
-  .navbar-mobile {
-    z-index: 12;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    background: #fff;
-    text-align: center;
-    height: 55px; }
-
-  .container-navbar {
-    margin-top: 50px !important;
-    top: 0;
-    position: fixed;
-    text-align: center;
-    width: 100%; }
-
-  .btn-nav {
-    margin-top: 10px;
-    margin-right: 10px;
-    font-size: 30px !important;
-    background: transparent;
-    float: right;
-    color: #D91E18 !important;
-    border: none;
-    outline: none; }
-
-  .brand {
-    float: left;
-    color: #D91E18;
-    margin-left: 15px;
-    margin-top: 16px; }
-
-  .nav-mobile {
-    position: relative;
-    text-transform: uppercase;
-    margin-bottom: -1px;
-    color: #888;
-    background-color: #fff;
-    list-style-type: none; }
-    .nav-mobile:first-child {
-      padding-top: 20px; }
-
-  a:hover {
-    border: none !important;
-    text-decoration: none !important;
-    color: #fff;
-    background-color: #D91E18; }
-
-  .col-md-4 {
-    padding-bottom: 10px !important;
-    padding-left: 10px !important;
-    padding-right: 10px !important; } }
 
 /*# sourceMappingURL=estilo.css.map */

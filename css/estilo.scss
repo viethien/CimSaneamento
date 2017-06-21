@@ -34,6 +34,7 @@ body, html{
   background: -webkit-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
   background: -moz-linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
   background: linear-gradient(rgba($r, $g, $b, $a1), rgba($r, $g, $b, $a2));
+  background-size: cover;
 }
 @mixin borderradius ($px) {
   -webkit-border-radius: $px;
@@ -64,7 +65,7 @@ body, html{
   text-align: right;
   position: fixed;
   top:0;
-  background-color: transparent;
+  background-color: $preto;
   width: 100%;
   color: #fff;
   z-index: 999;
@@ -73,7 +74,6 @@ body, html{
   -webkit-transition: all 1.1s ease;
   -moz-transition: all 1.1s ease;
   -o-transition: all 1.1s ease;
-
 }
 
 .nav-item{
@@ -98,6 +98,12 @@ body, html{
 }
 .nav-item:last-child{
   padding-right: 30px;
+}
+.navbar-mobile{
+  display: none;
+}
+.container-navbar{
+  display: none;
 }
 .titulo{
   text-transform: uppercase;
@@ -316,6 +322,7 @@ footer{
 }
 
 .triangulo{
+  margin-top: -1px;
   margin-left: 50% !important;
   margin-right: 50% !important;
   position: absolute;
@@ -357,6 +364,9 @@ color: $branco;
 }
 #clientes{
   background-color: $cinza;
+  .thumbnail{
+    background: transparent !important;
+  }
   .caption{
     color: $preto !important;
   }
@@ -367,7 +377,7 @@ color: $branco;
 
   li{
     list-style: none;
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 #transitosec{
@@ -384,29 +394,28 @@ img{
   max-width: 100%;
 }
   figcaption{
-    display: table-cell;
-    vertical-align: middle;
+    margin-left: -5px;
+    top:0;
+    position: absolute;
+    width: 101%;
+    height: 100%;
     color: $branco;
     @include transicao(0.5s);
     @include linear(0,0,0, 0.4, 0.4);
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left: 0;
  }
  .container-fig {
-   display: inline-block;
-   margin: auto;
    position: absolute;
-   top: 100px;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   position: absolute;
+   top: 50%;
+   left: 15%;
    width: 70%;
+   text-align: center;
+   -webkit-transform: translateY( -50% );
+   -moz-transform: translateY( -50% );
+   transform: translateY( -50% );
+   position: absolute;
    button{
+     word-wrap: none;
      @extend .botaoprimario;
      font-size: 14px !important;
      &:hover{
@@ -415,5 +424,65 @@ img{
      }
    }
   }
+}
+@media only screen and (max-width: 768px) {
+  .navbar{
+    display: none;
+  }
+  .navbar-mobile{
+    z-index: 12;
+    position: fixed;
+    top:0;
+    width: 100%;
+    display:block;
+    background: $branco;
+    text-align: center;
+    height: 55px;
+  }
+  .container-navbar{
+   margin-top: 50px !important;
+   top: 0;
+   position: fixed;
+   text-align: center;
+   width: 100%;
+  }
+  .btn-nav{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 30px !important;
+    background: transparent;
+    float: right;
+    color: $vermelho !important;
+    border: none;
+    outline: none;
+  }
+  .brand{
+    float: left;
+    color: $vermelho;
+    margin-left: 15px;
+    margin-top: 16px;
+  }
+  .nav-mobile{
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: -1px;
+    color: #888;
+    background-color: $branco;
+    list-style-type: none;
+    &:first-child{
+      padding-top: 20px;
+    }
+  }
+  a:hover{
+    border: none !important;
+    text-decoration: none !important;
+    color: $branco;
+    background-color: $vermelho;
+  }
 
+  .col-md-4{
+    padding-bottom: 10px !important;
+    padding-left: 10px !important;
+    padding-right:10px !important;
+  }
 }
