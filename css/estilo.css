@@ -6,6 +6,34 @@
 body, html {
   overflow-x: hidden; }
 
+a {
+  color: #fff !important; }
+  a:hover {
+    color: #F64747;
+    text-decoration: none; }
+
+#preloader {
+  z-index: 99999999999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ECF0F1;
+  z-index: 9999;
+  height: 100%;
+  width: 100%; }
+
+#status {
+  color: #292929;
+  width: 920px;
+  height: 532px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -266px 0 0 -460px;
+  background: url(../img/preloader.svg) center no-repeat; }
+
 @font-face {
   font-family: 'Lato';
   src: local("Lato Regular"), local("Lato-Regular"), url(../fonts/Lato-Regular.ttf) format("truetype");
@@ -21,14 +49,18 @@ body, html {
   text-justify: inter-word !important; }
 
 .text-center {
-  text-align: center; }
+  text-align: center;
+  margin: auto; }
+
+.escondida {
+  opacity: 0; }
 
 .navbar {
   height: 75px;
   text-align: right;
   position: fixed;
   top: 0;
-  background-color: #292929;
+  background-color: transparent;
   width: 100%;
   color: #fff;
   z-index: 999;
@@ -61,13 +93,18 @@ body, html {
 .nav-item:last-child {
   padding-right: 30px; }
 
+.brand {
+  float: left;
+  margin-top: 20px;
+  padding-left: 20px; }
+
 .navbar-mobile {
   display: none; }
 
 .container-navbar {
   display: none; }
 
-.titulo, .titulo2, footer .titulofooter, #banner h1, .banner-2 h1 {
+.titulo, .titulo2, footer .titulofooter, #banner h1, .banner-2 h1, .banner-3 h1, .banner-4 h1, .banner-5 h1 {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 2em;
@@ -88,7 +125,7 @@ body, html {
   font-weight: normal;
   font-size: 1.5rem; }
 
-#banner, .banner-2 {
+#banner, .banner-2, .banner-3, .banner-4, .banner-5 {
   background-color: #D91E18;
   background-repeat: no-repeat;
   background-size: cover;
@@ -99,7 +136,7 @@ body, html {
   top: 0 !important;
   font-family: 'Lato', sans-serif;
   font-weight: lighter; }
-  #banner h1, .banner-2 h1 {
+  #banner h1, .banner-2 h1, .banner-3 h1, .banner-4 h1, .banner-5 h1 {
     border-bottom: none; }
 
 section:not(:first-child) {
@@ -140,10 +177,10 @@ section:not(:first-child) {
     color: #fff; }
 
 .atividades, .atividadesSan {
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpg");
   background-color: #292929;
   color: #fff;
   background-size: cover;
@@ -163,10 +200,10 @@ section:not(:first-child) {
 .atividadesTran {
   max-width: 100%;
   overflow: hidden;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpg");
   background-color: #292929;
   color: #fff;
   background-size: cover;
@@ -218,23 +255,51 @@ footer {
   section:not(:first-child) {
     padding-top: 50px;
     padding-bottom: 50px; } }
-.banner-2 {
-  background: linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
-  background: -webkit-linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
-  background: -moz-linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
-  background: linear-gradient(rgba(242, 38, 19, 0.5), rgba(242, 38, 19, 0.5)), url("../img/sala.jpg");
+.banner-2, .banner-3, .banner-4, .banner-5 {
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sala.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sala.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sala.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/sala.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 60vh;
   margin-bottom: 0 !important; }
-  .banner-2 h1 {
-    margin-top: 75px;
+  .banner-2 h1, .banner-3 h1, .banner-4 h1, .banner-5 h1 {
+    margin-top: 10%;
     font-family: "Arial", sans-serif;
     color: #fff;
     font-size: 5rem;
     word-wrap: break-word;
     font-weight: bolder; }
+
+.banner-3, .banner-4, .banner-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/rodoviabanner.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/rodoviabanner.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/rodoviabanner.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/rodoviabanner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.banner-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/saneamento.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/saneamento.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/saneamento.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/saneamento.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.banner-5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/contato.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/contato.jpg");
+  background: -moz-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/contato.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/contato.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .comfig {
   overflow: hidden; }
@@ -270,22 +335,7 @@ footer {
   height: 0;
   border-style: solid;
   border-width: 30px 30px 0 30px;
-  border-color: #D91E18 transparent transparent transparent; }
-
-#sobrenos {
-  background: #D91E18;
-  color: #fff; }
-  #sobrenos .titulo, #sobrenos .titulo2, #sobrenos footer .titulofooter, footer #sobrenos .titulofooter, #sobrenos #banner h1, #banner #sobrenos h1, #sobrenos .banner-2 h1, .banner-2 #sobrenos h1 {
-    border-bottom-color: #292929; }
-  #sobrenos p {
-    font-size: 16px;
-    font-weight: bold; }
-  #sobrenos .col-md-6:last-child {
-    margin: 0 !important;
-    padding: 0 !important; }
-    #sobrenos .col-md-6:last-child img {
-      width: 80%;
-      max-width: 100%; }
+  border-color: #292929 transparent transparent transparent; }
 
 #missao .col-md-4 {
   padding-bottom: 20px;
@@ -308,9 +358,11 @@ footer {
     list-style: none;
     font-size: 20px; }
 
-#transitosec {
-  background: #D91E18;
-  color: #fff !important; }
+.descricao {
+  margin-top: -1px;
+  background: #292929;
+  color: #fff !important;
+  font-size: 16px; }
 
 .cards .thumbnail {
   position: relative; }
@@ -350,6 +402,56 @@ footer {
       background-color: #fff;
       color: #292929; }
 
+.roundfigure {
+  margin-bottom: 40px;
+  word-wrap: break-word; }
+  .roundfigure img {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    width: 60px;
+    height: 60px; }
+    .roundfigure img:hover {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      /* IE 9 */ }
+
+label {
+  padding-top: 20px; }
+
+input[type="text"], textarea {
+  background-color: #fff !important;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  -ms-border-radius: 0px !important;
+  box-shadow: 1px 1px 1px #888888 !important;
+  -webkit-box-shadow: 1px 1px 1px #888888 !important;
+  -moz-box-shadow: 1px 1px 1px #888888 !important;
+  -o-box-shadow: 1px 1px 1px #888888 !important;
+  -ms-box-shadow: 1px 1px 1px #888888 !important; }
+
+input:focus, textarea:focus {
+  border: 2px solid #59ABE3 !important; }
+
+iframe {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 25px;
+  width: 100%;
+  height: 100%;
+  border: none; }
+
 @media only screen and (max-width: 768px) {
   .navbar {
     display: none; }
@@ -360,7 +462,7 @@ footer {
     top: 0;
     width: 100%;
     display: block;
-    background: #fff;
+    background: #292929;
     text-align: center;
     height: 55px; }
 
@@ -384,7 +486,7 @@ footer {
   .brand {
     float: left;
     color: #D91E18;
-    margin-left: 15px;
+    margin-left: -5px;
     margin-top: 16px; }
 
   .nav-mobile {
@@ -392,7 +494,7 @@ footer {
     text-transform: uppercase;
     margin-bottom: -1px;
     color: #888;
-    background-color: #fff;
+    background-color: #292929;
     list-style-type: none; }
     .nav-mobile:first-child {
       padding-top: 20px; }
@@ -406,6 +508,22 @@ footer {
   .col-md-4 {
     padding-bottom: 10px !important;
     padding-left: 10px !important;
-    padding-right: 10px !important; } }
+    padding-right: 10px !important; }
+
+  #banner-3 h1, .banner-2 h1, .banner-3 h1, .banner-4 h1, .banner-5 h1, .banner-3 h1, .banner-4 h1, .banner-5 h1 {
+    font-size: 1.7em;
+    margin-top: 20%; }
+  #banner-3 h2, .banner-2 h2, .banner-3 h2, .banner-4 h2, .banner-5 h2, .banner-3 h2, .banner-4 h2, .banner-5 h2 {
+    font-size: 1em; }
+
+  iframe {
+    margin-left: -15px !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 25px;
+    width: 100vw;
+    height: 100%;
+    border: none; } }
 
 /*# sourceMappingURL=estilo.css.map */

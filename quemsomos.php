@@ -2,22 +2,22 @@
 <body>
   <?php include 'includes/nav.html'; ?>
   <section class="container-fluid banner-2" id="bannersobre">
-   <div class="row">
-     <div class="col-md-12 text-center">
-       <h1 class="titulo">NOSSA EMPRESA</h1>
-     </div>
-   </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="titulo">Sobre Nós</h1>
+        <h2 class="subtitulo">Aqui você poderá conhecer um pouquinho a nossa história.</h2>
+      </div>
+    </div>
   </section>
- <section class="container-fluid triangular" id="sobrenos">
+ <section class="container-fluid descricao" id="sobrenos">
 
   <div class="row">
     <div class="col-md-12 text-center">
       <h1 class="titulo">Quem somos?</h1>
-      <h2 class="subtitulo">Aqui você poderá conhecer um pouquinho a nossa história.</h2>
     </div>
   </div>
    <div class="row">
-       <article class="col-md-4 col-md-offset-2">
+       <article class="col-md-4 col-md-offset-2 ">
           <p class="text-justify">A Empresa CIM Saneamento existente a mais de quatro décadas é atuante dentro da área de Saneamento nas atividades de Limpeza e Desobstrução de redes em sistemas de esgoto, águas pluviais e Vídeo Inspeção Robotizada (CFTV).
 Na área de Trânsito instalamos Equipamentos Classificadores automatizados coletores de dados estatísticos de trânsito rodoviário em todo o território nacional,
 </p>

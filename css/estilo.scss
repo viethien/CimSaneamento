@@ -14,6 +14,36 @@ $pretomaisclaro: #505050;
 body, html{
   overflow-x: hidden;
 }
+a{
+  color: $branco !important;
+  &:hover{
+    color: $vermelho2;
+    text-decoration: none;
+  }
+}
+#preloader{
+  z-index: 99999999999;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:#ECF0F1;
+  z-index:9999;
+  height:100%;
+  width:100%;
+}
+#status{
+  color: $preto;
+  width:920px;
+  height:532px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-266px 0 0 -460px;
+  background:url(../img/preloader.svg) center no-repeat;
+}
+
 @font-face {
     font-family: 'Lato';
     src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/Lato-Regular.ttf) format('truetype');
@@ -59,13 +89,17 @@ body, html{
 }
 .text-center{
   text-align: center;
+  margin: auto;
+}
+.escondida{
+  opacity: 0;
 }
 .navbar{
   height: 75px;
   text-align: right;
   position: fixed;
   top:0;
-  background-color: $preto;
+  background-color: transparent;
   width: 100%;
   color: #fff;
   z-index: 999;
@@ -98,6 +132,11 @@ body, html{
 }
 .nav-item:last-child{
   padding-right: 30px;
+}
+.brand{
+  float: left;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 .navbar-mobile{
   display: none;
@@ -184,10 +223,10 @@ section:not(:first-child){
 }
 
 .atividades{
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/saneamento.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/saneamento.jpg');
+   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/saneamento.jpg');
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/saneamento.jpg');
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/saneamento.jpg');
   background-color: $preto;
   color: $branco;
   background-size: cover;
@@ -210,10 +249,10 @@ section:not(:first-child){
 .atividadesTran{
   max-width: 100%;
   overflow: hidden;
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: -webkit-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: -moz-linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
-  background: linear-gradient(black, rgba(0, 0, 0, 0.8)), url("../img/rodovia.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/rodovia.jpg');
+   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/rodovia.jpg');
+   background: -moz-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/rodovia.jpg');
+   background: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/rodovia.jpg');
   background-color: $preto;
   color: $branco;
   background-size: cover;
@@ -277,18 +316,31 @@ footer{
 }
 // A partir aqui comecei a trabalhar no "Quem somos (expandida)"
 .banner-2{
-  @include fotoLinear(242, 38, 19, 0.5, 0.5, sala, jpg);
+  text-align: center;
+  @include fotoLinear(0, 0, 0, 0.5, 0.5, sala, jpg);
   @extend #banner;
   height: 60vh;
   margin-bottom: 0 !important;
   h1{
-    margin-top: 75px;
+    margin-top: 10%;
     font-family: "Arial", sans-serif;
     color: $branco;
     font-size: 5rem;
     word-wrap: break-word;
     font-weight: bolder;
   }
+}
+.banner-3{
+  @extend .banner-2;
+  @include fotoLinear(0, 0, 0, 0.6, 0.6, rodoviabanner, jpg);
+}
+.banner-4{
+  @extend .banner-3;
+  @include fotoLinear(0, 0, 0, 0.6, 0.6, saneamento, jpg);
+}
+.banner-5{
+  @extend .banner-3;
+  @include fotoLinear(0, 0, 0, 0.6, 0.6, contato, jpg);
 }
 .comfig{
   overflow: hidden;
@@ -330,26 +382,7 @@ footer{
   height: 0;
   border-style: solid;
   border-width: 30px 30px 0 30px;
-  border-color: $vermelho transparent transparent transparent;
-}
-#sobrenos{
-background: $vermelho;
-color: $branco;
-.titulo{
-  border-bottom-color: $preto;
-}
- p {
-   font-size: 16px;
-   font-weight:  bold;
- }
- .col-md-6:last-child{
-   margin: 0 !important;
-   padding: 0!important;
-   img{
-     width: 80%;
-     max-width: 100%;
-   }
- }
+  border-color: $preto transparent transparent transparent;
 }
 
 #missao{
@@ -380,9 +413,11 @@ color: $branco;
     font-size: 20px;
   }
 }
-#transitosec{
- background: $vermelho;
- color: $branco !important;
+.descricao{
+  margin-top: -1px;
+  background: $preto;
+  color: $branco !important;
+  font-size: 16px;
 }
 
 .cards{
@@ -425,6 +460,53 @@ img{
    }
   }
 }
+.roundfigure{
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  img {
+    @include transicao(0.5s);
+    @include borderradius(50%);
+    width: 60px;
+    height: 60px;
+    &:hover{
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg); /* IE 9 */
+    }
+  }
+}
+label{
+  padding-top: 20px;
+}
+input[type="text"], textarea{
+  background-color: #fff !important;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  -ms-border-radius:0px !important;
+  box-shadow: 1px 1px 1px #888888 !important;
+  -webkit-box-shadow: 1px 1px 1px #888888 !important;
+  -moz-box-shadow: 1px 1px 1px #888888 !important;
+  -o-box-shadow: 1px 1px 1px #888888 !important;
+  -ms-box-shadow: 1px 1px 1px #888888 !important;
+}
+input:focus, textarea:focus{
+  border: 2px solid #59ABE3 !important;
+}
+iframe{
+  margin-left: 0!important;
+  margin-right: 0!important;
+  padding-left: 0!important;
+  padding-right: 0!important;
+  padding-top: 25px;
+
+  width: 100%;
+  height:100%;
+  border: none;
+}
 @media only screen and (max-width: 768px) {
   .navbar{
     display: none;
@@ -435,7 +517,7 @@ img{
     top:0;
     width: 100%;
     display:block;
-    background: $branco;
+    background: $preto;
     text-align: center;
     height: 55px;
   }
@@ -459,7 +541,7 @@ img{
   .brand{
     float: left;
     color: $vermelho;
-    margin-left: 15px;
+    margin-left: -5px;
     margin-top: 16px;
   }
   .nav-mobile{
@@ -467,7 +549,7 @@ img{
     text-transform: uppercase;
     margin-bottom: -1px;
     color: #888;
-    background-color: $branco;
+    background-color: $preto;
     list-style-type: none;
     &:first-child{
       padding-top: 20px;
@@ -484,5 +566,24 @@ img{
     padding-bottom: 10px !important;
     padding-left: 10px !important;
     padding-right:10px !important;
+  }
+  #banner-3, .banner-2, .banner-3{
+    h1{
+      font-size: 1.7em;
+      margin-top: 20%;
+    }
+    h2{
+      font-size: 1em;
+    }
+  }
+  iframe{
+    margin-left:-15px!important;
+    margin-right: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    padding-top: 25px;
+    width: 100vw;
+    height:100%;
+    border: none;
   }
 }

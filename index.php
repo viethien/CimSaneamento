@@ -26,18 +26,18 @@
    </section>
    <section class="container-fluid atividades" id="atividades">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 col-sm-12 text-center">
+      <div class="col-md-6 col-md-offset-3 col-sm-12 text-center escondida">
         <h1 class="titulo">O que nós fazemos?</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
+      <div class="col-md-6 col-md-offset-3 text-center escondida">
         <article class="subtitulo">Ofertamos soluções apropriadas de engenharia aos nossos clientes com qualidade diferenciada, valor justo e satisfação.</article>
         <br />
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-md-offset-2 ">
+      <div class="col-md-4 col-md-offset-2 escondida">
         <div class="thumbnail text-center">
          <h1><span class="glyphicon glyphicon-filter titulo2"></span></h1>
          <div class="caption">
@@ -49,7 +49,7 @@
          </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 escondida">
         <div class="thumbnail text-center">
          <h1><span class="glyphicon glyphicon-road titulo2"></span></h1>
          <div class="caption">

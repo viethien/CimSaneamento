@@ -1,20 +1,20 @@
 <?php include 'includes/header.html'; ?>
 <body>
   <?php include 'includes/nav.html'; ?>
-  <section class="container-fluid banner-3">
+  <section class="container-fluid banner-4">
    <div class="row">
      <div class="col-md-12 text-center">
-       <h1 class="titulo">Soluções para rodovias</h1>
-       <h2 class="subtitulo">Serviços de estatística de trânsito e operação de rodovias.</h2>
+       <h1 class="titulo">Soluções em Saneamento</h1>
+       <h2 class="subtitulo">SERVIÇOS DE LIMPEZA, DESOBSTRUÇÃO E VÍDEO INSPEÇÃO.</h2>
      </div>
    </div>
   </section>
  <section class="container-fluid descricao text-center">
    <div class="row text-center">
        <article class="col-md-6 col-md-offset-3 text-center" >
-            A CIM SANEAMENTO INSTRUMENTAL é a empresa líder no país em instalação e operação de equipamentos coletores de dados estatísticos de trânsito rodoviário. Atuamos a mais de 3 décadas em todo o território nacional fornecendo informações que subsidiam projetos, expansão e reforma  de rodovias.
-            Fazemos a instalação e manutenção da iluminação e a conservação viária, incluindo a capina e serviço de reboques para veículos avariados.
-</article>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla vestibulum eros a egestas. Donec suscipit diam justo, vel commodo lacus porttitor vel. Integer laoreet pharetra purus, eget scelerisque tellus aliquam id. Mauris a ultrices felis. Nullam nec scelerisque purus, sit amet porta lectus. Aenean sit amet rutrum tortor. Suspendisse blandit quis nunc et sollicitudin.
+
+       </article>
    </div>
  </section>
  <div class="row text-center">
@@ -26,18 +26,18 @@
    <div class="row">
      <div class="col-md-12 text-center escondida">
        <h1 class="titulo">Serviços que prestamos</h1>
-       <h2 class="subtitulo">Fazemos a instalação e manutenção da iluminação e conservação da via.</h2>
+       <h2 class="subtitulo">SERVIÇOS DE LIMPEZA, DESOBSTRUÇÃO E VÍDEO INSPEÇÃO.</h2>
      </div>
    </div>
   <div class="row">
   <div class="col-md-4 col-md-offset-2 escondida">
     <div class="thumbnail">
       <figure>
-        <img src="img/caminhao.jpg" alt="Imagem rodovia">
+        <img src="img/pressao.jpg" alt="Imagem rodovia">
         <figcaption>
           <div class="container-fig">
-            <h3>CONTAGEM CLASSIFICATÓRIA</h3>
-            <p>Realiza classificação dos veículos de acordo com o número de eixos.</p><br>
+            <h3>ALTA PRESSÃO</h3>
+            <p>Remove todos os tipos de detritos a uma pressão de até 2000 psi.</p><br>
             <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
           </div>
         </figcaption>
@@ -47,11 +47,11 @@
    <div class="col-md-4 escondida">
      <div class="thumbnail">
        <figure>
-         <img src="img/pesagem.jpeg" alt="Imagem rodovia">
+         <img src="img/vacuo.jpeg" alt="Imagem rodovia">
          <figcaption>
            <div class="container-fig">
-             <h3>PESAGEM EM MOVIMENTO - WIM</h3>
-             <p>Pesa os Veículos circulantes na via sem criar retenções mo tráfego.</p><br>
+             <h3>VÁCUO</h3>
+             <p>Utilizado para sugar sedimentos e detritos resultantes da limpeza.</p><br>
              <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
            </div>
          </figcaption>
@@ -63,11 +63,11 @@
      <div class="col-md-4 col-md-offset-2 escondida">
        <div class="thumbnail">
          <figure>
-           <img src="img/iluminacao.jpeg" alt="Imagem rodovia">
+           <img src="img/monitoramento.jpeg" alt="Imagem rodovia">
            <figcaption>
              <div class="container-fig">
-               <h3>ILUMINAÇÃO DE RODOVIAS</h3>
-               <p>Projetos e manutenção de iluminação em rodovias.</p><br>
+               <h3>VÍDEO INSPEÇÃO - CFTV</h3>
+               <p>Obtém imagens das condiçoes estruturais e operacionais da rede.</p><br>
                <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
              </div>
            </figcaption>
@@ -77,11 +77,11 @@
       <div class="col-md-4 escondida">
         <div class="thumbnail">
           <figure>
-            <img src="img/operacao.jpeg" alt="Imagem rodovia">
+            <img src="img/jateamento.jpg" alt="Imagem rodovia">
             <figcaption>
               <div class="container-fig">
-                <h3>OPERAÇÃO RODOVIÁRIA</h3>
-                <p>Serviços de reboques para apoio aos usuários e conservação viária</p><br>
+                <h3>SUPER HIDRO JATEAMENTO</h3>
+                <p>Remove crostas de dutos com pressões superiores a 2000 psi.</p><br>
                 <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
               </div>
             </figcaption>
