@@ -1,14 +1,14 @@
   <?php include 'includes/header.html'; ?>
   <body>
     <?php include 'includes/nav.html'; ?>
-   <section class="container-fluid" id="banner">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1 class="titulo">Cim Saneamento</h1>
-        <h2 class="subtitulo">Soluções em Inteligentes em Trânsito e Saneamento</h2>
+    <section class="container-fluid banner">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 class="titulo">Cim Sanemanento</h1>
+          <h2 class="subtitulo">Soluções inteligentes em transito e saneamento</h2>
+        </div>
       </div>
-    </div>
-   </section>
+    </section>
 
    <section class="container-fluid" id="sobre">
     <div class="row">
@@ -16,11 +16,13 @@
         <h1 class="titulo">Quem Somos?</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3 text-center">
-        <h2 class="subtitulo"> Empresa líder no seguimento de execução de serviços públicos e privados nas áreas de Saneamento e Operações Rodoviárias. Possuímos uma linha de equipamentos dentro da mais recente tecnologia disponível para atender nossos clientes</h2>
-        <a href="quemsomos.php"><button type="button" class="botaoprimario" name="button">Ver Mais</button></a>
-      </div>
+    <div class="row  text-center">
+      <article class="col-md-6 col-md-offset-3 text-center">
+         <p class="subtitulo text-center">
+            Empresa líder no seguimento de execução de serviços públicos e privados nas áreas de Saneamento e Operações Rodoviárias. Possuímos uma linha de equipamentos dentro da mais recente tecnologia disponível para atender nossos clientes.<br>
+           <a href="quemsomos.php"><button type="button" class="botaoprimario" name="button">Ver Mais</button></a>
+         </p>
+      </article>
     </div>
 
    </section>

@@ -9,14 +9,17 @@
      </div>
    </div>
   </section>
- <section class="container-fluid descricao text-center">
-   <div class="row text-center">
-       <article class="col-md-6 col-md-offset-3 text-center" >
-            A CIM SANEAMENTO INSTRUMENTAL é a empresa líder no país em instalação e operação de equipamentos coletores de dados estatísticos de trânsito rodoviário. Atuamos a mais de 3 décadas em todo o território nacional fornecendo informações que subsidiam projetos, expansão e reforma  de rodovias.
-            Fazemos a instalação e manutenção da iluminação e a conservação viária, incluindo a capina e serviço de reboques para veículos avariados.
-</article>
-   </div>
- </section>
+  <section class="container-fluid descricao">
+    <div class="row">
+      <article class="col-md-6 col-md-offset-3 ">
+         <p class="text-center">A CIM SANEAMENTO INSTRUMENTAL é a empresa líder no país em instalação e operação de equipamentos coletores de dados estatísticos de trânsito rodoviário. Atuamos a mais de 3 décadas em todo o território nacional fornecendo informações que subsidiam projetos, expansão e reforma  de rodovias.
+
+Fazemos a instalação e manutenção da iluminação e a conservação viária, incluindo a capina e serviço de reboques para veículos avariados.
+  </p>
+      </article>
+    </div>
+  </section>
+
  <div class="row text-center">
    <div class="triangulo ">
 
@@ -38,7 +41,7 @@
           <div class="container-fig">
             <h3>CONTAGEM CLASSIFICATÓRIA</h3>
             <p>Realiza classificação dos veículos de acordo com o número de eixos.</p><br>
-            <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+            <button type="button" data-toggle="modal" data-target="#contagem" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
           </div>
         </figcaption>
       </figure>
@@ -52,7 +55,7 @@
            <div class="container-fig">
              <h3>PESAGEM EM MOVIMENTO - WIM</h3>
              <p>Pesa os Veículos circulantes na via sem criar retenções mo tráfego.</p><br>
-             <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+             <button type="button" data-toggle="modal" data-target="#pesagem" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
            </div>
          </figcaption>
        </figure>
@@ -68,7 +71,7 @@
              <div class="container-fig">
                <h3>ILUMINAÇÃO DE RODOVIAS</h3>
                <p>Projetos e manutenção de iluminação em rodovias.</p><br>
-               <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+               <button type="button" data-toggle="modal" data-target="#iluminacao" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
              </div>
            </figcaption>
          </figure>
@@ -82,7 +85,7 @@
               <div class="container-fig">
                 <h3>OPERAÇÃO RODOVIÁRIA</h3>
                 <p>Serviços de reboques para apoio aos usuários e conservação viária</p><br>
-                <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+                <button type="button" data-toggle="modal" data-target="#operacao" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
               </div>
             </figcaption>
           </figure>
@@ -108,6 +111,8 @@
       </div>
      </div>
  </section>
+ <?php include 'includes/modaisTran.html'; ?>
  <?php include 'includes/footer.html'; ?>
+ <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>

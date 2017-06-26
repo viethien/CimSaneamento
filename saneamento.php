@@ -9,12 +9,13 @@
      </div>
    </div>
   </section>
- <section class="container-fluid descricao text-center">
-   <div class="row text-center">
-       <article class="col-md-6 col-md-offset-3 text-center" >
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla vestibulum eros a egestas. Donec suscipit diam justo, vel commodo lacus porttitor vel. Integer laoreet pharetra purus, eget scelerisque tellus aliquam id. Mauris a ultrices felis. Nullam nec scelerisque purus, sit amet porta lectus. Aenean sit amet rutrum tortor. Suspendisse blandit quis nunc et sollicitudin.
-
-       </article>
+ <section class="container-fluid descricao">
+   <div class="row">
+     <article class="col-md-6 col-md-offset-3 ">
+        <p class="text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+     </article>
    </div>
  </section>
  <div class="row text-center">
@@ -38,7 +39,7 @@
           <div class="container-fig">
             <h3>ALTA PRESSÃO</h3>
             <p>Remove todos os tipos de detritos a uma pressão de até 2000 psi.</p><br>
-            <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+            <button type="button" data-toggle="modal" data-target="#altapressao" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
           </div>
         </figcaption>
       </figure>
@@ -52,7 +53,7 @@
            <div class="container-fig">
              <h3>VÁCUO</h3>
              <p>Utilizado para sugar sedimentos e detritos resultantes da limpeza.</p><br>
-             <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+             <button type="button" data-toggle="modal" data-target="#vacuo" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
            </div>
          </figcaption>
        </figure>
@@ -68,7 +69,7 @@
              <div class="container-fig">
                <h3>VÍDEO INSPEÇÃO - CFTV</h3>
                <p>Obtém imagens das condiçoes estruturais e operacionais da rede.</p><br>
-               <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+               <button type="button" data-toggle="modal" data-target="#video" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
              </div>
            </figcaption>
          </figure>
@@ -82,7 +83,7 @@
               <div class="container-fig">
                 <h3>SUPER HIDRO JATEAMENTO</h3>
                 <p>Remove crostas de dutos com pressões superiores a 2000 psi.</p><br>
-                <button type="button" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
+                <button type="button" data-toggle="modal" data-target="#hidro" name="button"><span class="glyphicon glyphicon-plus-sign"></span> Ver Mais</button>
               </div>
             </figcaption>
           </figure>
@@ -108,6 +109,8 @@
       </div>
      </div>
  </section>
+ <?php include 'includes/modaisSan.html'; ?>
  <?php include 'includes/footer.html'; ?>
+ <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

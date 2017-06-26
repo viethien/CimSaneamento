@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <h1 class="titulo">Sobre Nós</h1>
-        <h2 class="subtitulo">Aqui você poderá conhecer um pouquinho a nossa história.</h2>
+        <h2 class="subtitulo">Aqui você poderá conhecer um pouco da nossa história.</h2>
       </div>
     </div>
   </section>
